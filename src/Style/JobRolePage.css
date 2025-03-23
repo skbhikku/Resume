@@ -1,0 +1,442 @@
+/* App.css */
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border: #e2e8f0;
+    --success: #10b981;
+    --error: #ef4444;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --radius-lg: 1rem;
+    --radius-md: 0.75rem;
+    --radius-sm: 0.5rem;
+    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 6rem 0 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, var(--primary), #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+  }
+  
+  /* Dropzone */
+  .dropzone {
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .upload-btn {
+    width: 100%;
+    padding: 1.25rem 2rem;
+    background: linear-gradient(to right, var(--primary), #4f46e5);
+    color: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  
+  .upload-btn:hover {
+    background: linear-gradient(to right, var(--primary-hover), #4338ca);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .file-icon {
+    font-size: 1.5rem;
+  }
+  
+  /* Analysis Section */
+  .analysis {
+    padding: 4rem 0;
+  }
+  
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .summary-card {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+  }
+  
+  .summary-card h6 {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .summary-card h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  /* Roles Grid */
+  .roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  /* Add these CSS updates to your App.css */
+  .role-card {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .role-card-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    margin-right: -0.75rem;
+  }
+  
+  /* Custom scrollbar styling */
+  .role-card-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .role-card-content::-webkit-scrollbar-track {
+    background: var(--background);
+    border-radius: 4px;
+  }
+  
+  .role-card-content::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+  }
+  
+  .role-card-content::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+  }
+  
+  .role-skills {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Keep all other CSS the same */
+  
+  .role-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .role-card-header .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 1.5rem 0;
+  }
+  
+  .role-section-title {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Skill Chips */
+  .skill-chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .skill-chip {
+    padding: 0.375rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+  
+  .skill-chip.success {
+    background: #d1fae5;
+    color: #065f46;
+  }
+  
+  .skill-chip.error {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+  
+  .skill-chip .icon {
+    font-size: 0.75rem;
+  }
+  
+  /* Top Roles Chips */
+  .chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--surface);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    font-size: 0.875rem;
+  }
+  
+  /* Loader */
+  .loader {
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  /* Add these new styles to your App.css */
+
+.role-title-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .salary-range {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .salary-pill {
+    padding: 0.25rem 0.25rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .salary-pill.avg {
+    background: #dbeafe;
+    color: #1d4ed8;
+  }
+  
+  .salary-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+  }
+  
+  .salary-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .salary-item .label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+  }
+  
+  .salary-item .value {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .salary-item .low {
+    color: #10b981;
+  }
+  
+  .salary-item .high {
+    color: #ef4444;
+  }
+  
+  /* Adjust existing styles to accommodate new elements */
+  .role-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .role-card-header h3 {
+    margin: 0;
+  }
+  
+  .role-card-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    margin-right: -0.75rem;
+  }
+
+
+
+  /* Add to your CSS file */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.upload-info {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.info-box {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  background: rgba(241, 245, 249, 0.5);
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.support-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.loader {
+  padding: 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Add animation for info items */
+.info-item {
+  transition: transform 0.2s ease;
+}
+
+.info-item:hover {
+  transform: translateX(5px);
+}
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .roles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
